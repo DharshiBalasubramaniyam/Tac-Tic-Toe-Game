@@ -1,0 +1,108 @@
+* {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+body {
+    margin: 0px;
+    /* background-image: linear-gradient(120deg, blue, deeppink); */
+    background-color: rgb(15, 15, 122);
+}
+
+#container {
+    padding-top: 100px;
+    height: 88vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    color: rgb(252, 156, 255);
+    font-weight: 400;
+    font-size: 35px;
+}
+
+#grid-container {
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: white;
+    padding: 5px 5px 5px 5px;
+    /* background-color:rgb(232, 122, 122); */
+}
+
+.box {
+    height: 90px;
+    width: 90px;
+    border: 1px solid rgb(186, 186, 186);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    pointer-events: none;
+    background-color: rgb(255, 255, 255);
+    color:rgb(2, 2, 91);
+}
+.box:nth-child(1), .box:nth-child(2), .box:nth-child(3){
+    border-top: none;
+}
+.box:nth-child(3n){
+    border-right: none;
+}
+.box:nth-child(3n-2){
+    border-left: none;
+}
+.box:nth-child(n+6){
+    border-bottom: none;
+}
+
+.active {
+    pointer-events: auto;
+}
+
+#btns {
+    /* width: 400px; */
+    /* background-color: aliceblue; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    width: 150px;
+    box-sizing: border-box;
+    margin: 25px 10px;
+    font-size: 20px;
+    border: none;
+    padding: 7px 0;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    background-color: blue;
+    color: #ffffff;
+    transition: 0.1s;
+}
+
+button:hover {
+    background-color: rgb(52, 52, 255);
+    cursor: pointer;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+#quit {
+    display: none;
+}
+
+#turn-or-win {
+    margin-top: 15px;
+    font-size: 25px;
+    color:rgb(252, 156, 255);
+    display: none;
+}
+
+
+
+
+
